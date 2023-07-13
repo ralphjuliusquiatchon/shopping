@@ -1,22 +1,53 @@
 const { createApp } = Vue
 
-  createApp({
+createApp({
     data() {
         return {
-            items : [],
+
+            isActive: false,
+
+            items : []
+            
            
         }
 
-      
+
+    
+    },
+
+    methods: {
+
+        viewPrice(index){
+
+            if (this.isActive = false) {
+                this.isActive = true
+
+                console.log(this.isActive)
+            }
+
+            else{
+                this.isActive = false
+                console.log(this.isActive)
+            }
+        
+
+
+
+        } 
+
+            
+
+        
     },
 
 
-    created(){
+
+    created() {
         
             axios
             .get('https://fakestoreapi.com/products')
             .then((res) => {
-            this.items.push(res.data);   
+            this.items = (res.data);   
             console.log (this.items);
            
             });
@@ -26,4 +57,4 @@ const { createApp } = Vue
 
         
     }
-  }).mount('#app')
+}).mount('#app')

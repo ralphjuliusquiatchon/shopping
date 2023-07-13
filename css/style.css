@@ -6,8 +6,89 @@
     box-sizing: border-box;
 }
 
+/* HEADER */
 
-ul li {
-    background-color: aqua;
+h1 {
+    text-align: center;
+    font-size: 4em;
+    margin-bottom: 100px;
+}
+
+/* MAIN */
+
+.container {
+    width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+   
+}
+
+.cards {
+    width: calc((100% / 4 - 60px));
+    height: 300px;
+    margin: 0 30px;
+    margin-bottom: 50px;
+    cursor: pointer;
+}
+
+
+.image-container {
+    width: 100%;
+    height: 80%;
     
 }
+
+.image-container > img {
+    width: 100%;
+    height: 100%;
+   
+}
+
+.title-container {
+    margin-top: 20px;
+    height: 20%;
+    font-weight: bold;
+    text-align: center;
+    
+    
+}
+
+.front-card {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;   
+}
+
+.cards:hover .front-card {
+    transition: all 2 ease;
+    display: none;
+}
+
+.cards:hover .back-card {
+    transition: all 2 ease;
+    display: block;
+}
+
+
+.back-card {
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    background-color:black;
+    color: white;
+    padding: 5px;
+    display: none;
+}
+
+.back-card span {
+    font-weight: bold;
+}
+
+.price-container {
+    margin-bottom: 10px
+}
+
+
