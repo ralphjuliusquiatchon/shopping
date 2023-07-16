@@ -3,12 +3,9 @@ const { createApp } = Vue
 createApp({
     data() {
         return {
-
-            isActive: false,
-
-            items : []
+            items : [],
+            cart : []
             
-           
         }
 
 
@@ -16,26 +13,10 @@ createApp({
     },
 
     methods: {
-
-        viewPrice(index){
-
-            if (this.isActive = false) {
-                this.isActive = true
-
-                console.log(this.isActive)
-            }
-
-            else{
-                this.isActive = false
-                console.log(this.isActive)
-            }
-        
-
-
-
-        } 
-
-            
+        addToCart(items, index) {
+            this.cart.push (this.items[index]);
+            console.log ('cart',this.cart,index);
+        }
 
         
     },

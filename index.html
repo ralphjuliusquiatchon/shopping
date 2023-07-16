@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shopping</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     
 </head>
 <body>
@@ -13,9 +14,40 @@
         <!-- HEADER -->
 
         <header>
-            <h1>
-                BRIGANDO
-            </h1>
+
+            <a href="#">
+                <div class="logo-container">
+                    <img src="images/shopping-logo.jpeg" alt="shopping-logo.jpeg">
+                </div>
+            </a>
+
+            <a href="#">
+                <h1>
+                    BRIGANDO
+                </h1>    
+            </a>   
+
+            <div class="utility">
+                <button>
+                    <a href="#">
+                        <i class="fa-regular fa-user fa-xl"></i>
+                </a>
+                </button>
+                <button>
+                    <a href="#">
+                        <i class="fa-regular fa-heart fa-xl"></i>
+                </a>
+                </button>
+                <button class="list-cart">
+                    <a href="#">
+                        <i class="fa-solid fa-cart-shopping fa-lg"></i>
+                    </a>
+                    <div class="counter-list-cart">
+                        {{cart.length}}
+                    </div>
+                </button>
+            </div>  
+
         </header>
 
 
@@ -44,8 +76,12 @@
                         </div>
                     </div>
 
+                    <div class="cart">
+                        <button @click="addToCart(items, index)">
+                            Add To Cart
+                        </button>
+                    </div>
 
-                    
                 </div>
 
                 
