@@ -16,6 +16,12 @@ a {
 button {
     background-color: transparent;
     border: none;
+    color: white;
+    cursor: pointer;
+}
+
+hr {
+    color: white;
 }
 
 /* HEADER */
@@ -35,6 +41,7 @@ header {
 
 .logo-container{
     width: 100px;
+    cursor: pointer;
 }
 
 header img {
@@ -44,6 +51,8 @@ header img {
 h1 {
     text-align: center;
     font-size: 4em;
+    color: white;
+    cursor: pointer;
 }
 
 .utility {
@@ -74,9 +83,12 @@ h1 {
 
 /* MAIN */
 
+main {
+    position: relative;
+}
+
 .container {
     width: 1000px;
-    margin: 0 auto;
     padding-top: 100px;
     display: flex;
     flex-wrap: wrap;
@@ -158,17 +170,74 @@ h1 {
 /* HOVER */
 
 .cards:hover .front-card {
-    transition: all 2 ease;
     display: none;
 }
 
 .cards:hover .back-card {
-    transition: all 2 ease;
     display: block;
 }
 
 .cards:hover .cart {
     border-top: 2px white solid;
+}
+
+/* LIST CART */
+
+.container-list-cart {
+    width: 350px;
+    height: 500px;
+    margin: 0 auto;
+    background-color: black;
+    position: absolute;
+    top: 95px;
+    right: 0;
+}
+
+h3 {
+    color: white;
+    text-align: center;
+    margin: 10px 0;
+}
+
+.container-list-cart > div {
+    height: 380px;
+    overflow-y: auto;
+}
+
+h4 {
+    padding: 10px;
+    color: white;position: fixed;
+    position: absolute;
+    bottom: 0;
+}
+
+.single-cart-item {
+    width: 100%;
+    height: 80px;
+    margin: 0 30px;
+    margin-bottom: 20px;
+    padding: 10px;
+    display: flex;
+}
+
+
+.single-cart-item > img {
+    width: 20%;
+    height: 100%;
+    margin-right: 20px;
+    
+}
+
+.single-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-weight: bold;
+    color: white;
+}
+
+.delete-item-cart {
+    color: red;
 }
 
 
